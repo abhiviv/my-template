@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		 #wrapper{
+  background: url(10.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  mix-blend-mode: lighten;
+  background-attachment: fixed;
+  } 
+  #container{
+    background-color: #c9c9e23d;
+    max-width: 300px;
+    height: 64vh;
+    margin-left: 41%;
+    margin-top: 8%;
+    box-shadow: 0px 4px 29px -2px rgba(0,0,0,0.72);
+  }
+  label{
+
+    font-size: 16px;
+    color: white;
+    font-family: cursive;
+
+  }
+  input[type=text]{
+       color:#0010ecc2;
+       font-weight: 900;
+         background-color: #c9c9e23d;
+         border: none;
+         border-bottom: 2px solid white;
+         outline: none;
+         border-radius: 9px ;
+         height: 5vh;
+         transition:  2s;
+  }
+   input[type=Password]{
+       color:#0010ecc2;
+       font-weight: 900;
+       border: none;
+         background-color: #c9c9e23d;
+         outline: none;
+         border-bottom: 2px solid white;
+         border-radius: 9px ;
+         height: 5vh;
+         transition:  2s;
+  }
+  .sss{
+
+    text-align: center;
+    font-family: monospace;
+    color: aliceblue;
+    transform: translate(0%,189%);
+}
+input[type=text]:hover{
+   border-bottom: 2px solid orange;
+   transition:  2s;
+}
+input[type=password]:hover{
+   border-bottom: 2px solid orange;
+   transition:  2s;
+}
+a{
+
+    font-size: 16px;
+    color: aliceblue;
+    font-family: serif;
+    text-align: center;
+    margin-left: 36px;
+
+}
+.button{
+    width: 194px;
+    height: 4.8vh;
+    border: 1px solid #f3f3f3;
+    margin-top: 6%;
+    background-color: #8b93a980;
+    color:#fdfcfcfc ;
+    font-size: 16px;
+    font-family: monospace;
+    outline: none;
+    font-weight: 800;
+    transition: 2s;
+    box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+  .button:hover{
+       background-color:#3498db;
+       transition: 2s; 
+        border-bottom: 1px solid ;
+        border: none;
+        border-radius: 7px;
+         }
+
+  #qqq
+   {
+    font-size: 29px;
+    margin-left: 81px;
+    margin-top: -2%;
+  }
+a,
+a span {
+display: inline-block;
+}
+a span {
+transition: 2s;
+}
+a:hover span {
+-webkit-transform: rotateX(360deg);
+transform: rotateX(360deg);
+}
+hr{
+
+    width: 210px;
+    margin-left: -10px;
+
+}
+@media only screen and (max-width: 600px) {
+  #container{
+     margin-left: 27px;
+     height: 72vh;
+  }
+  #qqq{
+      display: none;
+  }
+}                                     
+
+
+	</style>
+
+
+</head>
+<body id="wrapper">
+  <h1  class="sss" id="qqq">
+    Login From
+  </h1>
+<div id="container">
+  <h1 class="sss">Krishna Computer<h1>
+    <div style="transform: translate(13%,21%);margin-left: 13px; ">
+       <label>UserName:</label>
+       <br>
+       <input type="text" name="" placeholder="UserName">
+       <br>
+       <label>Password:</label>
+       <br>
+       <input type="Password" name="" placeholder="Enter Password">
+       <br>
+       <input type="submit" name="" class="button"><hr><a href=""><span>Forgot Password ?</span></a>
+    </div>
+
+</div>
+</body>
+</html>

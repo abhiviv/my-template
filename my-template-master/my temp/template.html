@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="animate.css">
+	<style type="text/css">
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 449.6px;
+  padding: 10px;
+  height: 452px; /* Should be removed. Only for demonstration */
+  -webkit-box-shadow: inset 79px 64px 221px -69px rgba(90, 143, 222, 0.75);
+-moz-box-shadow: inset 79px 64px 221px -69px rgba(90, 143, 222, 0.75)
+box-shadow: inset 79px 64px 221px -69px rgba(90, 143, 222, 0.75);
+}
+.curl-top-right {
+  display: inline-block;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.curl-top-right:before {
+  pointer-events: none;
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 0;
+  right: 0;
+  background: white;
+  /* IE9 */
+  background: linear-gradient(225deg, white 45%, #aaa 50%, #ccc 56%, white 80%);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.3s;
+  transition-property: width height;
+}
+.curl-top-right:hover:before {
+  width: 25px;
+  height: 25px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+a:hover{
+	color: red;
+}
+
+		@import url(https://fonts.googleapis.com/css?family=Raleway);
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+}
+@media (min-width: 992px) {
+  .slider,
+  .slide {
+    height: 80vh;
+  }
+}
+.slide {
+  position: relative;
+}
+.slide .slide__img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .slide .slide__img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+.slide .slide__img img {
+  max-width: 100%;
+  height: auto;
+  opacity: 1 !important;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  transition: all 1s ease;
+}
+.slide .slide__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.slide .slide__content--headings {
+  text-align: center;
+  color: #FFF;
+}
+.slide .slide__content--headings h2 {
+  font-size: 4.5rem;
+  margin: 10px 0;
+}
+.slide .slide__content--headings .animated {
+  transition: all 0.5s ease;
+}
+.slider [data-animation-in] {
+  opacity: 0;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  transition: opacity 0.5s ease 0.3s;
+}
+.slick-dotted .slick-slider {
+  margin-bottom: 30px;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  border: 0;
+  display: block;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.simple-dots .slick-dots li {
+  width: 20px;
+  height: 20px;
+}
+.simple-dots .slick-dots li button {
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.25;
+  width: 20px;
+  height: 20px;
+}
+.simple-dots .slick-dots li button:hover,
+.simple-dots .slick-dots li button:focus {
+  opacity: 1;
+}
+.simple-dots .slick-dots li.slick-active button {
+  color: white;
+  opacity: 0.75;
+}
+.stick-dots .slick-dots li {
+  height: 3px;
+  width: 50px;
+}
+.stick-dots .slick-dots li button {
+  position: relative;
+  background-color: white;
+  opacity: 0.25;
+  width: 50px;
+  height: 3px;
+  padding: 0;
+}
+.stick-dots .slick-dots li button:hover,
+.stick-dots .slick-dots li button:focus {
+  opacity: 1;
+}
+.stick-dots .slick-dots li.slick-active button {
+  color: white;
+  opacity: 0.75;
+}
+.stick-dots .slick-dots li.slick-active button:hover,
+.stick-dots .slick-dots li.slick-active button:focus {
+  opacity: 1;
+}
+/* /////////// IMAGE ZOOM /////////// */
+@-webkit-keyframes zoomInImage {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  to {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+}
+@keyframes zoomInImage {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  to {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+}
+.zoomInImage {
+  -webkit-animation-name: zoomInImage;
+          animation-name: zoomInImage;
+}
+@-webkit-keyframes zoomOutImage {
+  from {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes zoomOutImage {
+  from {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+.zoomOutImage {
+  -webkit-animation-name: zoomOutImage;
+          animation-name: zoomOutImage;
+}
+
+/*footer*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: Roboto;
+}
+
+.footer-distributed {
+  background-color: #191919;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+div.ex2 {
+  max-width:1349px;
+  margin: auto;
+    background-color: #f5e8dd00;
+  height:39vh;
+}
+marquee {
+    height: 300px;
+    width: 100%;
+}
+  
+.aaa {
+    height: 231px;
+    margin-top: 13px;
+    border: 2px solid orange;
+    padding: 2px;
+}
+.aaa1 {
+    height: 302px;
+    margin-top: 13px;
+    border: 2px solid orange;
+    padding: 2px;
+}
+.aaa1:hover .qwerty{
+  transform: rotate(180deg);
+}
+/* Media Queries */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9999;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 6px auto;
+  padding: 11px;
+  background: #fff;
+  border-radius: 5px;
+  width: 87%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.why{
+  background-color: #2b3945;
+  max-width: 1349px;
+  height: auto;
+  margin-top: -31px;
+}
+.pain{
+   float: left;
+  width: 449.6px;
+  padding: 10px;
+  height: 400px; /* Should be removed. Only for demonstration */
+  background-color: ;
+  margin-left: 62px;
+    margin-top: 0px;
+  }
+  .nopain{
+   float: left;
+  width: 733.6px;
+  padding: 10px;
+  height: 400px; /* Should be removed. Only for demonstration */
+  background-color: ;
+  margin-left: 62px;
+    margin-top: 0px;
+  }
+   /*contact*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+/** {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -o-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+*/
+/*body {
+  font-family:"Open Sans", Helvetica, Arial, sans-serif;
+  font-weight:300;
+  font-size: 12px;
+  line-height:30px;
+  color:#777;
+  background:#0CF;
+}*/
+
+.aboutus {
+  max-width:1211px;
+  width:100%;
+  margin:0 auto;
+  position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+  background:#F9F9F9;
+  padding:25px;
+  margin:50px 0;
+}
+
+#contact h3 {
+  color: #F96;
+  display: block;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#contact h4 {
+  margin:5px 0 15px;
+  display:block;
+  font-size:13px;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+  width:100%;
+  border:1px solid #CCC;
+  background:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+  -webkit-transition:border-color 0.3s ease-in-out;
+  -moz-transition:border-color 0.3s ease-in-out;
+  transition:border-color 0.3s ease-in-out;
+  border:1px solid #AAA;
+}
+
+#contact textarea {
+  height:100px;
+  max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+  cursor:pointer;
+  width:100%;
+  border:none;
+  background:#0CF;
+  color:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+  background:#09C;
+  -webkit-transition:background 0.3s ease-in-out;
+  -moz-transition:background 0.3s ease-in-out;
+  transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+  outline:0;
+  border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+  .aaa{
+  	margin-top: 6px;
+  }
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 90%;
+  }
+  .nopain{
+       width: 374.6px;
+    margin-left: -12px;
+    margin-top: -154px;
+  }
+  .pain{
+    margin-left: -1px;
+  }
+  .aaa1{
+    height: 214px;
+    margin-left: -1px;
+  }
+  .aboutus{
+    max-width: 400px;
+  }
+  div.ex2{
+    height: 36vh;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Sacramento);
+audio,canvas,video{display:inline-block;}
+audio:not([controls]){display:none;height:0;}
+[hidden]{display:none;}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{font-family:Lato, Arial, sans-serif;background:#add8df;color:#fff;overflow-x:hidden;overflow-y:scroll;font-weight:300;margin:0;}
+a:focus{outline:thin dotted;}
+a:active,a:hover{outline:0;}
+h1{font-size:2em;margin:.67em 0;}
+abbr[title]{border-bottom:1px dotted;}
+b,strong{font-weight:bold;}
+dfn{font-style:italic;}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}
+mark{background:#ff0;color:#000;}
+code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}
+pre{white-space:pre-wrap;}
+q{quotes:\201C \201D \2018 \2019;}
+small{font-size:80%;}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-.5em;}
+sub{bottom:-.25em;}
+img{border:0;}
+svg:not(:root){overflow:hidden;}
+figure{margin:0;}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}
+button,input{line-height:normal;}
+button,select{text-transform:none;}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+button[disabled],html input[disabled]{cursor:default;}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+textarea{overflow:auto;vertical-align:top;}
+table{border-collapse:collapse;border-spacing:0;}
+@font-face{font-family:codropsicons;src:url(../fonts/codropsicons/codropsicons.eot?#iefix) format(embedded-opentype), url(../fonts/codropsicons/codropsicons.woff) format(woff), url(../fonts/codropsicons/codropsicons.ttf) format(truetype), url(../fonts/codropsicons/codropsicons.svg#codropsicons) format(svg);font-weight:normal;font-style:normal;}
+.clearfix:before,.clearfix:after{content:'';display:table;}
+.clearfix:after{clear:both;}
+a{color:rgba(0,0,0,0.4);text-decoration:none;outline:none;}
+.container > header{text-align:center;background:rgba(0,0,0,0.01);margin:0 auto;padding:2em;}
+.container > header h1{font-size:2.625em;line-height:1.3;font-weight:300;margin:0;}
+.container > header span{display:block;font-size:63%;font-weight:400;color:rgba(0,0,0,0.4);padding:.2em 0 .6em .1em;}
+.container > header span a:hover{opacity:0.7;}
+.codrops-top{background:rgba(255,255,255,0.2);text-transform:uppercase;width:100%;font-size:.7em;line-height:2.2;font-weight:700;}
+.codrops-top a{text-decoration:none;letter-spacing:.1em;display:inline-block;padding:0 1em;}
+.codrops-top a:hover{background:rgba(255,255,255,0.6);color:#333;}
+.codrops-top span.right{float:right;}
+.codrops-top span.right a{float:left;display:block;}
+.codrops-icon:before{font-family:codropsicons;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;margin:0 4px;}
+.codrops-icon-drop:before{content:"\e001";}
+.codrops-icon-prev:before{content:"\e004";}
+.related{text-align:center;font-size:1.6em;padding:2em 0;}
+.related a{display:block;max-width:200px;margin:0 auto;}
+.related a span{display:block;font-size:.5em;fontweight:300;}
+*,:after,::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.elasticstack{position:relative;width:340px;height:290px;list-style:none;-webkit-perspective:1000px;-webkit-perspective-origin:50% 150%;perspective:1000px;perspective-origin:50% 150%;margin:0px auto;padding:0;}
+.no-js .elasticstack{max-width:1090px;width:100%;height:auto;text-align:center;}
+.elasticstack li{position:absolute;z-index:1;width:340px;height:380px;box-shadow:0 10px 7px -7px rgba(0,0,0,0.12), 0 0 4px rgba(0,0,0,0.1);opacity:0;cursor:pointer;-webkit-transform:translate3d(0,0,-180px);transform:translate3d(0,0,-180px);-webkit-transform-style:preserve-3d;transform-style:preserve-3d;border-color:#fff;border-style:solid;border-width:60px 20px;}
+.no-js .elasticstack li{position:relative;display:inline-block;opacity:1;cursor:default;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);margin:10px;}
+.elasticstack li h5{color:#143f51;height:60px;text-align:right;font-size:1.4em;font-family:Sacramento, cursive;line-height:60px;margin:0 5px;}
+.elasticstack li.animate{-webkit-transition:all .3s ease-out;transition:all .3s ease-out;}
+.elasticstack li.move-back{-webkit-transition-timing-function:cubic-bezier(0.175,0.885,0.470,1.515);transition-timing-function:cubic-bezier(0.175,0.885,0.470,1.515);}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary,.elasticstack li img{display:block;}
+legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+a:hover,a:focus,.container > header span a{color:#;}
+@media screen and max-width 25em {
+.codrops-icon span{display:none;}
+}
+.qw{
+   width: 380px;
+   margin-left: 24px;
+}
+
+@media (max-width: 426px) {
+	  .column{
+	  	  width:409px;
+	  }
+    .elasticstack{width:416px;}
+    .qw {
+    width: 341px;
+    margin-left: -5px;
+}
+}
+
+	</style>
+	
+  <script type="text/javascript">
+$('.slider').slick({
+  autoplay: true,
+  speed: 800,
+  lazyLoad: 'progressive',
+  arrows: false,
+  dots: true,
+}).slickAnimation();
+ </script>
+ <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="css1/style.css">
+</head>
+<body>
+
+<nav class='cf'>
+  <ul class='cf'>
+    <li>
+      <a href='#' class="curl-top-right">Home</a>
+    </li>
+    <li>
+      <a href='#' class="curl-top-right">Photo</a>
+    </li>
+    <li>
+      <a href='#' class="curl-top-right">Contact us</a>
+    </li>
+    <li>
+      <a href='#popup1'class="curl-top-right" onclick="aaa()">Login</a>
+    </li>
+  </ul>
+  <a href='#' id='openup'>MENU</a>
+</nav>
+  <script src='js/jquery1.min.js'></script>
+    <script  src="js1/index.js"></script>
+  <div class="slider stick-dots">
+    <div class="slide">
+      <div class="slide__img">
+        <img src="1.jpg" alt="" data-lazy="" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
+      <div class="slide__content">
+        <div class="slide__content--headings">
+           <h2 class="animated" data-animation-in="fadeInUp">Slide me to the moon</h2>
+           <p class="animated" data-animation-in="fadeInUp" data-delay-in="0.3">With awesome animations</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide__img">
+        <img src="2.jpg" alt="" data-lazy="" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
+      <div class="slide__content">
+        <div class="slide__content--headings">
+           <h2 class="animated" data-animation-in="fadeInRight">Slide me to the moon</h2>
+           <p class="animated" data-animation-in="fadeInRight" data-delay-in="0.2">With awesome animations</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide__img">
+        <img src="3.jpg" alt="" data-lazy="" class="full-image animated" data-animation-in="zoomInImage"/>
+      </div>
+      <div class="slide__content">
+        <div class="slide__content--headings">
+           <h2 class="animated" data-animation-in="fadeInRight">Slide me to the moon</h2>
+           <p class="animated" data-animation-in="fadeInRight" data-delay-in="0.2">With awesome animations</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<main>
+	
+<div class="row">
+  <div class="column" style="background-color:#f5e8dd;">
+  	<p style="padding: 0px;margin-top: -2px;font-size: 19px;font-family: cursive;color: black;">Team</p>
+   <ul id="elasticstack" class="elasticstack">
+				<li><img src="https://tympanus.net/Development/ElasticStack/img/1.jpg" alt="01"/><h5>Saudade</h5></li>
+				<li><div class="overlay"></div><img src="https://tympanus.net/Development/ElasticStack/img/2.jpg" alt="02"/><h5>Abhishek Singh</h5></li>
+				<li><img src="https://tympanus.net/Development/ElasticStack/img/3.jpg" alt="03"/><h5>Retrouvailles</h5></li>
+				<li><img src="https://tympanus.net/Development/ElasticStack/img/4.jpg" alt="04"/><h5>Onsra</h5></li>
+				<li><img src="https://tympanus.net/Development/ElasticStack/img/5.jpg" alt="05"/><h5>Mamihlapinatapai</h5></li>
+				<li><img src="https://tympanus.net/Development/ElasticStack/img/6.jpg" alt="06"/><h5>Koi No Yokan</h5></li>
+			</ul>
+  </div>
+  <div class="column" style="background-color:#f5e8dd;">
+  	<p style="padding: 0px;margin-top: -2px;font-size: 19px;font-family: cursive;color: black;">About Us</p>
+    <div class="qw">
+    	<marquee behavior="slide" direction="up" onMouseOver="this.stop()" onMouseOut="this.start()" style="height: 57vh;padding: 15px;border: 3px solid #ffefeffc;background-color: #fdfdfd; border-radius: 11px">
+              <p style="font-size:18px;font-family: monospace; color:#143f51; ">Resize the browser window to see how the text size scales.</p>
+
+          <p style="font-size:18px;font-family: monospace; color:#143f51;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
+
+           <p style="font-family: monospace;color:#143f51;">Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>   	
+    	</marquee>
+    </div>
+  </div>
+  <div class="column" style="background-color:#f5e8dd;">
+    <p style="padding: 0px;margin-top: -2px;font-size: 19px;font-family: cursive;color: black;">Services</p>
+    <div class="qw">
+    	<marquee behavior="slide" direction="up" onMouseOver="this.stop()" onMouseOut="this.start()" style="height: 57vh;padding: 15px;border: 3px solid #ffefeffc;background-color: #fdfdfd; border-radius: 11px">
+              <p style="font-size:18px;font-family: monospace; color:#143f51; ">Resize the browser window to see how the text size scales.</p>
+
+          <p style="font-size:18px;font-family: monospace; color:#143f51;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
+
+           <p style="font-family: monospace;color:#143f51;">Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>   	
+    	</marquee>
+    </div>
+  </div>
+</div>
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<a class="close" href="#" onclick="wwwa()">&times;</a>
+		<div class="content">
+             <iframe src="login-1.html" style=" height: 94vh;width: 100%;"></iframe>
+		</div>
+	</div>
+</div>
+
+<div class="ex2">
+     <marquee behavior="alternate" onMouseOver="this.stop()" onMouseOut="this.start()">
+          <img src="1.jpg" class="aaa">
+          <img src="2.jpg" class="aaa">
+          <img src="3.jpg" class="aaa">
+          <img src="6.jpg" class="aaa">
+          <img src="7.jpg" class="aaa">
+          <img src="8.jpg" class="aaa">
+        </marquee></div>
+        <div class="why">
+         <h1 style="font-size: 48px;font-family: cursive;"> Why Choose Us</h1>
+         <div class="row">
+         <div class="pain animatable bounceInRight">
+           <img src="1.jpg" class="aaa1">
+         </div>
+          <div class="nopain animatable bounceInLeft">
+           <p style="text-align: justify;font-weight: 300;font-family: cursive;">
+             Lorem ipsum Elit ut consequat veniam eu nulla nulla reprehenderit reprehenderit sit velit in cupidatat ex aliquip ut cupidatat Excepteur tempor id irure sed dolore sint sunt voluptate ullamco nulla qui Duis qui culpa voluptate enim ea aute qui veniam in irure et nisi nostrud deserunt est officia minim.
+           </p>
+         </div>
+       </div>
+        </div>
+        <div class="aboutus animatable bounceInRight">  
+  <form id="contact" action="" method="post">
+    <h3>Quick Contact</h3>
+    <h4>Contact us today, and get reply with in 24 hours!</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Web Site starts with http://" type="url" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+ 
+  
+</div>
+</main>
+	<footer class="footer-distributed">
+
+			<div class="footer-right">
+
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="#">Home</a>
+
+					<a href="#">Blog</a>
+
+					<a href="#">Pricing</a>
+
+					<a href="#">About</a>
+
+					<a href="#">Faq</a>
+
+					<a href="#">Contact</a>
+				</p>
+
+				<p>Company Name &copy; 2015</p>
+			</div>
+
+		</footer>
+		<script type="text/javascript">
+	function aaa() {
+		var a= document.getElementById('popup1');
+		    a.style.display="block";
+	}
+    function wwwa(){
+	    var s=document.getElementById("popup1");
+	        s.style.display="none";
+}
+</script>
+ <script src='js/jquery.min.js'></script>
+<script src='js/slick.min.js'></script>
+<script src='js/slick-animation.min.js'></script>
+    <script  src="js/index.js"></script>
+    	<script>
+			new ElastiStack( document.getElementById( 'elasticstack' ) );
+		</script>
+<script>
+/*Modernizr - header*/
+/* Modernizr 2.6.3 (Custom Build) | MIT & BSD
+ * Build: https://modernizr.com/download/#-csstransitions-shiv-cssclasses-prefixed-testprop-testallprops-domprefixes-load
+ */
+;
+window.Modernizr = function (a, b, c) {
+    function x(a) {
+        j.cssText = a
+    }
+
+    function y(a, b) {
+        return x(prefixes.join(a + ";") + (b || ""))
+    }
+
+    function z(a, b) {
+        return typeof a === b
+    }
+
+    function A(a, b) {
+        return !!~("" + a).indexOf(b)
+    }
+
+    function B(a, b) {
+        for (var d in a) {
+            var e = a[d];
+            if (!A(e, "-") && j[e] !== c) return b == "pfx" ? e : !0
+        }
+        return !1
+    }
+
+    function C(a, b, d) {
+        for (var e in a) {
+            var f = b[a[e]];
+            if (f !== c) return d === !1 ? a[e] : z(f, "function") ? f.bind(d || b) : f
+        }
+        return !1
+    }
+
+    function D(a, b, c) {
+        var d = a.charAt(0).toUpperCase() + a.slice(1),
+            e = (a + " " + n.join(d + " ") + d).split(" ");
+        return z(b, "string") || z(b, "undefined") ? B(e, b) : (e = (a + " " + o.join(d + " ") + d).split(" "), C(e, b, c))
+    }
+    var d = "2.6.3",
+        e = {}, f = !0,
+        g = b.documentElement,
+        h = "modernizr",
+        i = b.createElement(h),
+        j = i.style,
+        k, l = {}.toString,
+        m = "Webkit Moz O ms",
+        n = m.split(" "),
+        o = m.toLowerCase().split(" "),
+        p = {}, q = {}, r = {}, s = [],
+        t = s.slice,
+        u, v = {}.hasOwnProperty,
+        w;
+    !z(v, "undefined") && !z(v.call, "undefined") ? w = function (a, b) {
+        return v.call(a, b)
+    } : w = function (a, b) {
+        return b in a && z(a.constructor.prototype[b], "undefined")
+    }, Function.prototype.bind || (Function.prototype.bind = function (b) {
+        var c = this;
+        if (typeof c != "function") throw new TypeError;
+        var d = t.call(arguments, 1),
+            e = function () {
+                if (this instanceof e) {
+                    var a = function () {};
+                    a.prototype = c.prototype;
+                    var f = new a,
+                        g = c.apply(f, d.concat(t.call(arguments)));
+                    return Object(g) === g ? g : f
+                }
+                return c.apply(b, d.concat(t.call(arguments)))
+            };
+        return e
+    }), p.csstransitions = function () {
+        return D("transition")
+    };
+    for (var E in p) w(p, E) && (u = E.toLowerCase(), e[u] = p[E](), s.push((e[u] ? "" : "no-") + u));
+    return e.addTest = function (a, b) {
+        if (typeof a == "object")
+            for (var d in a) w(a, d) && e.addTest(d, a[d]);
+        else {
+            a = a.toLowerCase();
+            if (e[a] !== c) return e;
+            b = typeof b == "function" ? b() : b, typeof f != "undefined" && f && (g.className += " " + (b ? "" : "no-") + a), e[a] = b
+        }
+        return e
+    }, x(""), i = k = null,
+    function (a, b) {
+        function k(a, b) {
+            var c = a.createElement("p"),
+                d = a.getElementsByTagName("head")[0] || a.documentElement;
+            return c.innerHTML = "x<style>" + b + "</style>", d.insertBefore(c.lastChild, d.firstChild)
+        }
+
+        function l() {
+            var a = r.elements;
+            return typeof a == "string" ? a.split(" ") : a
+        }
+
+        function m(a) {
+            var b = i[a[g]];
+            return b || (b = {}, h++, a[g] = h, i[h] = b), b
+        }
+
+        function n(a, c, f) {
+            c || (c = b);
+            if (j) return c.createElement(a);
+            f || (f = m(c));
+            var g;
+            return f.cache[a] ? g = f.cache[a].cloneNode() : e.test(a) ? g = (f.cache[a] = f.createElem(a)).cloneNode() : g = f.createElem(a), g.canHaveChildren && !d.test(a) ? f.frag.appendChild(g) : g
+        }
+
+        function o(a, c) {
+            a || (a = b);
+            if (j) return a.createDocumentFragment();
+            c = c || m(a);
+            var d = c.frag.cloneNode(),
+                e = 0,
+                f = l(),
+                g = f.length;
+            for (; e < g; e++) d.createElement(f[e]);
+            return d
+        }
+
+        function p(a, b) {
+            b.cache || (b.cache = {}, b.createElem = a.createElement, b.createFrag = a.createDocumentFragment, b.frag = b.createFrag()), a.createElement = function (c) {
+                return r.shivMethods ? n(c, a, b) : b.createElem(c)
+            }, a.createDocumentFragment = Function("h,f", "return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&(" + l().join().replace(/\w+/g, function (a) {
+                return b.createElem(a), b.frag.createElement(a), 'c("' + a + '")'
+            }) + ");return n}")(r, b.frag)
+        }
+
+        function q(a) {
+            a || (a = b);
+            var c = m(a);
+            return r.shivCSS && !f && !c.hasCSS && (c.hasCSS = !! k(a, "article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}mark{background:#FF0;color:#000}")), j || p(a, c), a
+        }
+        var c = a.html5 || {}, d = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,
+            e = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,
+            f, g = "_html5shiv",
+            h = 0,
+            i = {}, j;
+        (function () {
+            try {
+                var a = b.createElement("a");
+                a.innerHTML = "<xyz></xyz>", f = "hidden" in a, j = a.childNodes.length == 1 || function () {
+                    b.createElement("a");
+                    var a = b.createDocumentFragment();
+                    return typeof a.cloneNode == "undefined" || typeof a.createDocumentFragment == "undefined" || typeof a.createElement == "undefined"
+                }()
+            } catch (c) {
+                f = !0, j = !0
+            }
+        })();
+        var r = {
+            elements: c.elements || "abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video",
+            shivCSS: c.shivCSS !== !1,
+            supportsUnknownElements: j,
+            shivMethods: c.shivMethods !== !1,
+            type: "default",
+            shivDocument: q,
+            createElement: n,
+            createDocumentFragment: o
+        };
+        a.html5 = r, q(b)
+    }(this, b), e._version = d, e._domPrefixes = o, e._cssomPrefixes = n, e.testProp = function (a) {
+        return B([a])
+    }, e.testAllProps = D, e.prefixed = function (a, b, c) {
+        return b ? D(a, b, c) : D(a, "pfx")
+    }, g.className = g.className.replace(/(^|\s)no-js(\s|$)/, "$1$2") + (f ? " js " + s.join(" ") : ""), e
+}(this, this.document),
+function (a, b, c) {
+    function d(a) {
+        return "[object Function]" == o.call(a)
+    }
+
+    function e(a) {
+        return "string" == typeof a
+    }
+
+    function f() {}
+
+    function g(a) {
+        return !a || "loaded" == a || "complete" == a || "uninitialized" == a
+    }
+
+    function h() {
+        var a = p.shift();
+        q = 1, a ? a.t ? m(function () {
+            ("c" == a.t ? B.injectCss : B.injectJs)(a.s, 0, a.a, a.x, a.e, 1)
+        }, 0) : (a(), h()) : q = 0
+    }
+
+    function i(a, c, d, e, f, i, j) {
+        function k(b) {
+            if (!o && g(l.readyState) && (u.r = o = 1, !q && h(), l.onload = l.onreadystatechange = null, b)) {
+                "img" != a && m(function () {
+                    t.removeChild(l)
+                }, 50);
+                for (var d in y[c]) y[c].hasOwnProperty(d) && y[c][d].onload()
+            }
+        }
+        var j = j || B.errorTimeout,
+            l = b.createElement(a),
+            o = 0,
+            r = 0,
+            u = {
+                t: d,
+                s: c,
+                e: f,
+                a: i,
+                x: j
+            };
+        1 === y[c] && (r = 1, y[c] = []), "object" == a ? l.data = c : (l.src = c, l.type = a), l.width = l.height = "0", l.onerror = l.onload = l.onreadystatechange = function () {
+            k.call(this, r)
+        }, p.splice(e, 0, u), "img" != a && (r || 2 === y[c] ? (t.insertBefore(l, s ? null : n), m(k, j)) : y[c].push(l))
+    }
+
+    function j(a, b, c, d, f) {
+        return q = 0, b = b || "j", e(a) ? i("c" == b ? v : u, a, b, this.i++, c, d, f) : (p.splice(this.i++, 0, a), 1 == p.length && h()), this
+    }
+
+    function k() {
+        var a = B;
+        return a.loader = {
+            load: j,
+            i: 0
+        }, a
+    }
+    var l = b.documentElement,
+        m = a.setTimeout,
+        n = b.getElementsByTagName("script")[0],
+        o = {}.toString,
+        p = [],
+        q = 0,
+        r = "MozAppearance" in l.style,
+        s = r && !! b.createRange().compareNode,
+        t = s ? l : n.parentNode,
+        l = a.opera && "[object Opera]" == o.call(a.opera),
+        l = !! b.attachEvent && !l,
+        u = r ? "object" : l ? "script" : "img",
+        v = l ? "script" : u,
+        w = Array.isArray || function (a) {
+            return "[object Array]" == o.call(a)
+        }, x = [],
+        y = {}, z = {
+            timeout: function (a, b) {
+                return b.length && (a.timeout = b[0]), a
+            }
+        }, A, B;
+    B = function (a) {
+        function b(a) {
+            var a = a.split("!"),
+                b = x.length,
+                c = a.pop(),
+                d = a.length,
+                c = {
+                    url: c,
+                    origUrl: c,
+                    prefixes: a
+                }, e, f, g;
+            for (f = 0; f < d; f++) g = a[f].split("="), (e = z[g.shift()]) && (c = e(c, g));
+            for (f = 0; f < b; f++) c = x[f](c);
+            return c
+        }
+
+        function g(a, e, f, g, h) {
+            var i = b(a),
+                j = i.autoCallback;
+            i.url.split(".").pop().split("?").shift(), i.bypass || (e && (e = d(e) ? e : e[a] || e[g] || e[a.split("/").pop().split("?")[0]]), i.instead ? i.instead(a, e, f, g, h) : (y[i.url] ? i.noexec = !0 : y[i.url] = 1, f.load(i.url, i.forceCSS || !i.forceJS && "css" == i.url.split(".").pop().split("?").shift() ? "c" : c, i.noexec, i.attrs, i.timeout), (d(e) || d(j)) && f.load(function () {
+                k(), e && e(i.origUrl, h, g), j && j(i.origUrl, h, g), y[i.url] = 2
+            })))
+        }
+
+        function h(a, b) {
+            function c(a, c) {
+                if (a) {
+                    if (e(a)) c || (j = function () {
+                        var a = [].slice.call(arguments);
+                        k.apply(this, a), l()
+                    }), g(a, j, b, 0, h);
+                    else if (Object(a) === a)
+                        for (n in m = function () {
+                            var b = 0,
+                                c;
+                            for (c in a) a.hasOwnProperty(c) && b++;
+                            return b
+                        }(), a) a.hasOwnProperty(n) && (!c && !--m && (d(j) ? j = function () {
+                            var a = [].slice.call(arguments);
+                            k.apply(this, a), l()
+                        } : j[n] = function (a) {
+                            return function () {
+                                var b = [].slice.call(arguments);
+                                a && a.apply(this, b), l()
+                            }
+                        }(k[n])), g(a[n], j, b, n, h))
+                } else !c && l()
+            }
+            var h = !! a.test,
+                i = a.load || a.both,
+                j = a.callback || f,
+                k = j,
+                l = a.complete || f,
+                m, n;
+            c(h ? a.yep : a.nope, !! i), i && c(i)
+        }
+        var i, j, l = this.yepnope.loader;
+        if (e(a)) g(a, 0, l, 0);
+        else if (w(a))
+            for (i = 0; i < a.length; i++) j = a[i], e(j) ? g(j, 0, l, 0) : w(j) ? B(j) : Object(j) === j && h(j, l);
+        else Object(a) === a && h(a, l)
+    }, B.addPrefix = function (a, b) {
+        z[a] = b
+    }, B.addFilter = function (a) {
+        x.push(a)
+    }, B.errorTimeout = 1e4, null == b.readyState && b.addEventListener && (b.readyState = "loading", b.addEventListener("DOMContentLoaded", A = function () {
+        b.removeEventListener("DOMContentLoaded", A, 0), b.readyState = "complete"
+    }, 0)), a.yepnope = k(), a.yepnope.executeStack = h, a.yepnope.injectJs = function (a, c, d, e, i, j) {
+        var k = b.createElement("script"),
+            l, o, e = e || B.errorTimeout;
+        k.src = a;
+        for (o in d) k.setAttribute(o, d[o]);
+        c = j ? h : c || f, k.onreadystatechange = k.onload = function () {
+            !l && g(k.readyState) && (l = 1, c(), k.onload = k.onreadystatechange = null)
+        }, m(function () {
+            l || (l = 1, c(1))
+        }, e), i ? k.onload() : n.parentNode.insertBefore(k, n)
+    }, a.yepnope.injectCss = function (a, c, d, e, g, i) {
+        var e = b.createElement("link"),
+            j, c = i ? h : c || f;
+        e.href = a, e.rel = "stylesheet", e.type = "text/css";
+        for (j in d) e.setAttribute(j, d[j]);
+        g || (n.parentNode.insertBefore(e, n), m(c, 0))
+    }
+}(this, document), Modernizr.load = function () {
+    yepnope.apply(window, [].slice.call(arguments, 0))
+};
+
+/*draggabilly.pkgd.min.js - Called after UL*/
+/*!
+ * Draggabilly PACKAGED v1.0.7
+ * Make that shiz draggable
+ * https://draggabilly.desandro.com
+ */
+
+(function (t) {
+    "use strict";
+
+    function e(t) {
+        return RegExp("(^|\\s+)" + t + "(\\s+|$)")
+    }
+
+    function n(t, e) {
+        var n = i(t, e) ? r : o;
+        n(t, e)
+    }
+    var i, o, r;
+    "classList" in document.documentElement ? (i = function (t, e) {
+        return t.classList.contains(e)
+    }, o = function (t, e) {
+        t.classList.add(e)
+    }, r = function (t, e) {
+        t.classList.remove(e)
+    }) : (i = function (t, n) {
+        return e(n).test(t.className)
+    }, o = function (t, e) {
+        i(t, e) || (t.className = t.className + " " + e)
+    }, r = function (t, n) {
+        t.className = t.className.replace(e(n), " ")
+    });
+    var s = {
+        hasClass: i,
+        addClass: o,
+        removeClass: r,
+        toggleClass: n,
+        has: i,
+        add: o,
+        remove: r,
+        toggle: n
+    };
+    "function" == typeof define && define.amd ? define(s) : t.classie = s
+})(window),
+function (t) {
+    "use strict";
+    var e = document.documentElement,
+        n = function () {};
+    e.addEventListener ? n = function (t, e, n) {
+        t.addEventListener(e, n, !1)
+    } : e.attachEvent && (n = function (e, n, i) {
+        e[n + i] = i.handleEvent ? function () {
+            var e = t.event;
+            e.target = e.target || e.srcElement, i.handleEvent.call(i, e)
+        } : function () {
+            var n = t.event;
+            n.target = n.target || n.srcElement, i.call(e, n)
+        }, e.attachEvent("on" + n, e[n + i])
+    });
+    var i = function () {};
+    e.removeEventListener ? i = function (t, e, n) {
+        t.removeEventListener(e, n, !1)
+    } : e.detachEvent && (i = function (t, e, n) {
+        t.detachEvent("on" + e, t[e + n]);
+        try {
+            delete t[e + n]
+        } catch (i) {
+            t[e + n] = void 0
+        }
+    });
+    var o = {
+        bind: n,
+        unbind: i
+    };
+    "function" == typeof define && define.amd ? define(o) : t.eventie = o
+}(this),
+function () {
+    "use strict";
+
+    function t() {}
+
+    function e(t, e) {
+        for (var n = t.length; n--;)
+            if (t[n].listener === e) return n;
+        return -1
+    }
+
+    function n(t) {
+        return function () {
+            return this[t].apply(this, arguments)
+        }
+    }
+    var i = t.prototype;
+    i.getListeners = function (t) {
+        var e, n, i = this._getEvents();
+        if ("object" == typeof t) {
+            e = {};
+            for (n in i) i.hasOwnProperty(n) && t.test(n) && (e[n] = i[n])
+        } else e = i[t] || (i[t] = []);
+        return e
+    }, i.flattenListeners = function (t) {
+        var e, n = [];
+        for (e = 0; t.length > e; e += 1) n.push(t[e].listener);
+        return n
+    }, i.getListenersAsObject = function (t) {
+        var e, n = this.getListeners(t);
+        return n instanceof Array && (e = {}, e[t] = n), e || n
+    }, i.addListener = function (t, n) {
+        var i, o = this.getListenersAsObject(t),
+            r = "object" == typeof n;
+        for (i in o) o.hasOwnProperty(i) && -1 === e(o[i], n) && o[i].push(r ? n : {
+            listener: n,
+            once: !1
+        });
+        return this
+    }, i.on = n("addListener"), i.addOnceListener = function (t, e) {
+        return this.addListener(t, {
+            listener: e,
+            once: !0
+        })
+    }, i.once = n("addOnceListener"), i.defineEvent = function (t) {
+        return this.getListeners(t), this
+    }, i.defineEvents = function (t) {
+        for (var e = 0; t.length > e; e += 1) this.defineEvent(t[e]);
+        return this
+    }, i.removeListener = function (t, n) {
+        var i, o, r = this.getListenersAsObject(t);
+        for (o in r) r.hasOwnProperty(o) && (i = e(r[o], n), -1 !== i && r[o].splice(i, 1));
+        return this
+    }, i.off = n("removeListener"), i.addListeners = function (t, e) {
+        return this.manipulateListeners(!1, t, e)
+    }, i.removeListeners = function (t, e) {
+        return this.manipulateListeners(!0, t, e)
+    }, i.manipulateListeners = function (t, e, n) {
+        var i, o, r = t ? this.removeListener : this.addListener,
+            s = t ? this.removeListeners : this.addListeners;
+        if ("object" != typeof e || e instanceof RegExp)
+            for (i = n.length; i--;) r.call(this, e, n[i]);
+        else
+            for (i in e) e.hasOwnProperty(i) && (o = e[i]) && ("function" == typeof o ? r.call(this, i, o) : s.call(this, i, o));
+        return this
+    }, i.removeEvent = function (t) {
+        var e, n = typeof t,
+            i = this._getEvents();
+        if ("string" === n) delete i[t];
+        else if ("object" === n)
+            for (e in i) i.hasOwnProperty(e) && t.test(e) && delete i[e];
+        else delete this._events;
+        return this
+    }, i.emitEvent = function (t, e) {
+        var n, i, o, r, s = this.getListenersAsObject(t);
+        for (o in s)
+            if (s.hasOwnProperty(o))
+                for (i = s[o].length; i--;) n = s[o][i], r = n.listener.apply(this, e || []), (r === this._getOnceReturnValue() || n.once === !0) && this.removeListener(t, n.listener);
+        return this
+    }, i.trigger = n("emitEvent"), i.emit = function (t) {
+        var e = Array.prototype.slice.call(arguments, 1);
+        return this.emitEvent(t, e)
+    }, i.setOnceReturnValue = function (t) {
+        return this._onceReturnValue = t, this
+    }, i._getOnceReturnValue = function () {
+        return this.hasOwnProperty("_onceReturnValue") ? this._onceReturnValue : !0
+    }, i._getEvents = function () {
+        return this._events || (this._events = {})
+    }, "function" == typeof define && define.amd ? define(function () {
+        return t
+    }) : "object" == typeof module && module.exports ? module.exports = t : this.EventEmitter = t
+}.call(this),
+function (t) {
+    "use strict";
+
+    function e(t) {
+        if (t) {
+            if ("string" == typeof i[t]) return t;
+            t = t.charAt(0).toUpperCase() + t.slice(1);
+            for (var e, o = 0, r = n.length; r > o; o++)
+                if (e = n[o] + t, "string" == typeof i[e]) return e
+        }
+    }
+    var n = "Webkit Moz ms Ms O".split(" "),
+        i = document.documentElement.style;
+    "function" == typeof define && define.amd ? define(function () {
+        return e
+    }) : t.getStyleProperty = e
+}(window),
+function (t) {
+    "use strict";
+
+    function e(t) {
+        var e = parseFloat(t),
+            n = -1 === t.indexOf("%") && !isNaN(e);
+        return n && e
+    }
+
+    function n() {
+        for (var t = {
+            width: 0,
+            height: 0,
+            innerWidth: 0,
+            innerHeight: 0,
+            outerWidth: 0,
+            outerHeight: 0
+        }, e = 0, n = s.length; n > e; e++) {
+            var i = s[e];
+            t[i] = 0
+        }
+        return t
+    }
+
+    function i(t) {
+        function i(t) {
+            if ("string" == typeof t && (t = document.querySelector(t)), t && "object" == typeof t && t.nodeType) {
+                var i = r(t);
+                if ("none" === i.display) return n();
+                var h = {};
+                h.width = t.offsetWidth, h.height = t.offsetHeight;
+                for (var d = h.isBorderBox = !(!a || !i[a] || "border-box" !== i[a]), u = 0, c = s.length; c > u; u++) {
+                    var f = s[u],
+                        p = i[f],
+                        l = parseFloat(p);
+                    h[f] = isNaN(l) ? 0 : l
+                }
+                var g = h.paddingLeft + h.paddingRight,
+                    v = h.paddingTop + h.paddingBottom,
+                    m = h.marginLeft + h.marginRight,
+                    y = h.marginTop + h.marginBottom,
+                    E = h.borderLeftWidth + h.borderRightWidth,
+                    b = h.borderTopWidth + h.borderBottomWidth,
+                    x = d && o,
+                    L = e(i.width);
+                L !== !1 && (h.width = L + (x ? 0 : g + E));
+                var P = e(i.height);
+                return P !== !1 && (h.height = P + (x ? 0 : v + b)), h.innerWidth = h.width - (g + E), h.innerHeight = h.height - (v + b), h.outerWidth = h.width + m, h.outerHeight = h.height + y, h
+            }
+        }
+        var o, a = t("boxSizing");
+        return function () {
+            if (a) {
+                var t = document.createElement("div");
+                t.style.width = "200px", t.style.padding = "1px 2px 3px 4px", t.style.borderStyle = "solid", t.style.borderWidth = "1px 2px 3px 4px", t.style[a] = "border-box";
+                var n = document.body || document.documentElement;
+                n.appendChild(t);
+                var i = r(t);
+                o = 200 === e(i.width), n.removeChild(t)
+            }
+        }(), i
+    }
+    var o = document.defaultView,
+        r = o && o.getComputedStyle ? function (t) {
+            return o.getComputedStyle(t, null)
+        } : function (t) {
+            return t.currentStyle
+        }, s = ["paddingLeft", "paddingRight", "paddingTop", "paddingBottom", "marginLeft", "marginRight", "marginTop", "marginBottom", "borderLeftWidth", "borderRightWidth", "borderTopWidth", "borderBottomWidth"];
+    "function" == typeof define && define.amd ? define(["get-style-property/get-style-property"], i) : t.getSize = i(t.getStyleProperty)
+}(window),
+function (t) {
+    "use strict";
+
+    function e(t, e) {
+        for (var n in e) t[n] = e[n];
+        return t
+    }
+
+    function n() {}
+
+    function i(i, o, s, d, u) {
+        function f(t, n) {
+            this.element = t, this.options = e({}, this.options), e(this.options, n), this._create()
+        }
+
+        function p() {
+            return !1
+        }
+
+        function l(t, e) {
+            t.x = void 0 !== e.pageX ? e.pageX : e.clientX, t.y = void 0 !== e.pageY ? e.pageY : e.clientY
+        }
+        var g = d("transform"),
+            v = !! d("perspective");
+        e(f.prototype, o.prototype), f.prototype.options = {}, f.prototype._create = function () {
+            this.position = {}, this._getPosition(), this.startPoint = {
+                x: 0,
+                y: 0
+            }, this.dragPoint = {
+                x: 0,
+                y: 0
+            }, this.startPosition = e({}, this.position);
+            var t = a(this.element);
+            "relative" !== t.position && "absolute" !== t.position && (this.element.style.position = "relative"), this.enable(), this.setHandles()
+        }, f.prototype.setHandles = function () {
+            this.handles = this.options.handle ? this.element.querySelectorAll(this.options.handle) : [this.element];
+            for (var t = 0, e = this.handles.length; e > t; t++) {
+                var n = this.handles[t];
+                s.bind(n, "mousedown", this), s.bind(n, "touchstart", this), y(n)
+            }
+        };
+        var m = "attachEvent" in r.documentElement,
+            y = m ? function (t) {
+                "IMG" === t.nodeName && (t.ondragstart = p);
+                for (var e = t.querySelectorAll("img"), n = 0, i = e.length; i > n; n++) {
+                    var o = e[n];
+                    o.ondragstart = p
+                }
+            } : n;
+        f.prototype._getPosition = function () {
+            var t = a(this.element),
+                e = parseInt(t.left, 10),
+                n = parseInt(t.top, 10);
+            this.position.x = isNaN(e) ? 0 : e, this.position.y = isNaN(n) ? 0 : n, this._addTransformPosition(t)
+        }, f.prototype._addTransformPosition = function (t) {
+            if (g) {
+                var e = t[g];
+                if (0 === e.indexOf("matrix")) {
+                    var n = e.split(","),
+                        i = 0 === e.indexOf("matrix3d") ? 12 : 4,
+                        o = parseInt(n[i], 10),
+                        r = parseInt(n[i + 1], 10);
+                    this.position.x += o, this.position.y += r
+                }
+            }
+        }, f.prototype.handleEvent = function (t) {
+            var e = "on" + t.type;
+            this[e] && this[e](t)
+        }, f.prototype.getTouch = function (t) {
+            for (var e = 0, n = t.length; n > e; e++) {
+                var i = t[e];
+                if (i.identifier === this.pointerIdentifier) return i
+            }
+        }, f.prototype.onmousedown = function (t) {
+            var e = t.button;
+            e && 0 !== e && 1 !== e || this.dragStart(t, t)
+        }, f.prototype.ontouchstart = function (t) {
+            this.isDragging || this.dragStart(t, t.changedTouches[0])
+        }, f.prototype.dragStart = function (e, n) {
+            if (this.isEnabled) {
+                e.preventDefault ? e.preventDefault() : e.returnValue = !1;
+                var o = "touchstart" === e.type;
+                this.pointerIdentifier = n.identifier, this._getPosition(), this.measureContainment(), l(this.startPoint, n), this.startPosition.x = this.position.x, this.startPosition.y = this.position.y, this.setLeftTop(), this.dragPoint.x = 0, this.dragPoint.y = 0, this._bindEvents({
+                    events: o ? ["touchmove", "touchend", "touchcancel"] : ["mousemove", "mouseup"],
+                    node: e.preventDefault ? t : r
+                }), i.add(this.element, "is-dragging"), this.isDragging = !0, this.emitEvent("dragStart", [this, e, n]), this.animate()
+            }
+        }, f.prototype._bindEvents = function (t) {
+            for (var e = 0, n = t.events.length; n > e; e++) {
+                var i = t.events[e];
+                s.bind(t.node, i, this)
+            }
+            this._boundEvents = t
+        }, f.prototype._unbindEvents = function () {
+            var t = this._boundEvents;
+            if (t && t.events) {
+                for (var e = 0, n = t.events.length; n > e; e++) {
+                    var i = t.events[e];
+                    s.unbind(t.node, i, this)
+                }
+                delete this._boundEvents
+            }
+        }, f.prototype.measureContainment = function () {
+            var t = this.options.containment;
+            if (t) {
+                this.size = u(this.element);
+                var e = this.element.getBoundingClientRect(),
+                    n = h(t) ? t : "string" == typeof t ? r.querySelector(t) : this.element.parentNode;
+                this.containerSize = u(n);
+                var i = n.getBoundingClientRect();
+                this.relativeStartPosition = {
+                    x: e.left - i.left,
+                    y: e.top - i.top
+                }
+            }
+        }, f.prototype.onmousemove = function (t) {
+            this.dragMove(t, t)
+        }, f.prototype.ontouchmove = function (t) {
+            var e = this.getTouch(t.changedTouches);
+            e && this.dragMove(t, e)
+        }, f.prototype.dragMove = function (t, e) {
+            if (l(this.dragPoint, e), this.dragPoint.x -= this.startPoint.x, this.dragPoint.y -= this.startPoint.y, this.options.containment) {
+                var n = this.relativeStartPosition.x,
+                    i = this.relativeStartPosition.y;
+                this.dragPoint.x = Math.max(this.dragPoint.x, -n), this.dragPoint.y = Math.max(this.dragPoint.y, -i), this.dragPoint.x = Math.min(this.dragPoint.x, this.containerSize.width - n - this.size.width), this.dragPoint.y = Math.min(this.dragPoint.y, this.containerSize.height - i - this.size.height)
+            }
+            this.position.x = this.startPosition.x + this.dragPoint.x, this.position.y = this.startPosition.y + this.dragPoint.y, this.emitEvent("dragMove", [this, t, e])
+        }, f.prototype.onmouseup = function (t) {
+            this.dragEnd(t, t)
+        }, f.prototype.ontouchend = function (t) {
+            var e = this.getTouch(t.changedTouches);
+            e && this.dragEnd(t, e)
+        }, f.prototype.dragEnd = function (t, e) {
+            this.isDragging = !1, delete this.pointerIdentifier, g && (this.element.style[g] = "", this.setLeftTop()), this._unbindEvents(), i.remove(this.element, "is-dragging"), this.emitEvent("dragEnd", [this, t, e])
+        }, f.prototype.ontouchcancel = function (t) {
+            var e = this.getTouch(t.changedTouches);
+            this.dragEnd(t, e)
+        }, f.prototype.animate = function () {
+            if (this.isDragging) {
+                this.positionDrag();
+                var t = this;
+                c(function () {
+                    t.animate()
+                })
+            }
+        };
+        var E = v ? function (t, e) {
+                return "translate3d( " + t + "px, " + e + "px, 0)"
+            } : function (t, e) {
+                return "translate( " + t + "px, " + e + "px)"
+            };
+        return f.prototype.setLeftTop = function () {
+            this.element.style.left = this.position.x + "px", this.element.style.top = this.position.y + "px"
+        }, f.prototype.positionDrag = g ? function () {
+            this.element.style[g] = E(this.dragPoint.x, this.dragPoint.y)
+        } : f.prototype.setLeftTop, f.prototype.enable = function () {
+            this.isEnabled = !0
+        }, f.prototype.disable = function () {
+            this.isEnabled = !1, this.isDragging && this.dragEnd()
+        }, f
+    }
+    for (var o, r = t.document, s = r.defaultView, a = s && s.getComputedStyle ? function (t) {
+            return s.getComputedStyle(t, null)
+        } : function (t) {
+            return t.currentStyle
+        }, h = "object" == typeof HTMLElement ? function (t) {
+            return t instanceof HTMLElement
+        } : function (t) {
+            return t && "object" == typeof t && 1 === t.nodeType && "string" == typeof t.nodeName
+        }, d = 0, u = "webkit moz ms o".split(" "), c = t.requestAnimationFrame, f = t.cancelAnimationFrame, p = 0; u.length > p && (!c || !f); p++) o = u[p], c = c || t[o + "RequestAnimationFrame"], f = f || t[o + "CancelAnimationFrame"] || t[o + "CancelRequestAnimationFrame"];
+    c && f || (c = function (e) {
+        var n = (new Date).getTime(),
+            i = Math.max(0, 16 - (n - d)),
+            o = t.setTimeout(function () {
+                e(n + i)
+            }, i);
+        return d = n + i, o
+    }, f = function (e) {
+        t.clearTimeout(e)
+    }), "function" == typeof define && define.amd ? define(["classie/classie", "eventEmitter/EventEmitter", "eventie/eventie", "get-style-property/get-style-property", "get-size/get-size"], i) : t.Draggabilly = i(t.classie, t.EventEmitter, t.eventie, t.getStyleProperty, t.getSize)
+}(window);
+
+/*elastiStack.js - Called after UL*/
+/**
+ * elastiStack.js v1.0.0
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * https://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2013, Codrops
+ * http://www.codrops.com
+ */
+;
+(function (window) {
+
+    'use strict';
+
+    function extend(a, b) {
+        for (var key in b) {
+            if (b.hasOwnProperty(key)) {
+                a[key] = b[key];
+            }
+        }
+        return a;
+    }
+
+    // support
+    var is3d = !! getStyleProperty('perspective'),
+        supportTransitions = Modernizr.csstransitions,
+        // transition end event name
+        transEndEventNames = {
+            'WebkitTransition': 'webkitTransitionEnd',
+            'MozTransition': 'transitionend',
+            'OTransition': 'oTransitionEnd',
+            'msTransition': 'MSTransitionEnd',
+            'transition': 'transitionend'
+        },
+        transEndEventName = transEndEventNames[Modernizr.prefixed('transition')];
+
+    function ElastiStack(el, options) {
+        this.container = el;
+        this.options = extend({}, this.options);
+        extend(this.options, options);
+        this._init();
+    }
+
+    function setTransformStyle(el, tval) {
+        el.style.WebkitTransform = tval;
+        el.style.msTransform = tval;
+        el.style.transform = tval;
+    }
+
+    ElastiStack.prototype.options = {
+        // distDragBack: if the user stops dragging the image in a area that does not exceed [distDragBack]px for either x or y then the image goes back to the stack 
+        distDragBack: 200,
+        // distDragMax: if the user drags the image in a area that exceeds [distDragMax]px for either x or y then the image moves away from the stack 
+        distDragMax: 450,
+        // callback
+        onUpdateStack: function (current) {
+            return false;
+        }
+    };
+
+    ElastiStack.prototype._init = function () {
+        // items
+        this.items = [].slice.call(this.container.children);
+        // total items
+        this.itemsCount = this.items.length;
+        // current item's index (the one on the top of the stack)
+        this.current = 0;
+        // set initial styles
+        this._setStackStyle();
+        // return if no items or only one
+        if (this.itemsCount <= 1) return;
+        // add dragging capability
+        this._initDragg();
+        // init drag events
+        this._initEvents();
+    };
+
+    ElastiStack.prototype._initEvents = function () {
+        var self = this;
+        this.draggie.on('dragStart', function (i, e, p) {
+            self._onDragStart(i, e, p);
+        });
+        this.draggie.on('dragMove', function (i, e, p) {
+            self._onDragMove(i, e, p);
+        });
+        this.draggie.on('dragEnd', function (i, e, p) {
+            self._onDragEnd(i, e, p);
+        });
+    };
+
+    ElastiStack.prototype._setStackStyle = function () {
+        var item1 = this._firstItem(),
+            item2 = this._secondItem(),
+            item3 = this._thirdItem();
+
+        if (item1) {
+            item1.style.opacity = 1;
+            item1.style.zIndex = 4;
+            setTransformStyle(item1, is3d ? 'translate3d(0,0,0)' : 'translate(0,0)');
+        }
+
+        if (item2) {
+            item2.style.opacity = 1;
+            item2.style.zIndex = 3;
+            setTransformStyle(item2, is3d ? 'translate3d(0,0,-60px)' : 'translate(0,0)');
+        }
+
+        if (item3) {
+            item3.style.opacity = 1;
+            item3.style.zIndex = 2;
+            setTransformStyle(item3, is3d ? 'translate3d(0,0,-120px)' : 'translate(0,0)');
+        }
+    };
+
+    ElastiStack.prototype._moveAway = function (instance) {
+        // disable drag
+        this._disableDragg();
+
+        // add class "animate"
+        classie.add(instance.element, 'animate');
+
+        // calculate how much to translate in the x and y axis
+        var tVal = this._getTranslateVal(instance);
+
+        // apply it	
+        setTransformStyle(instance.element, is3d ? 'translate3d(' + tVal.x + 'px,' + tVal.y + 'px, 0px)' : 'translate(' + tVal.x + 'px,' + tVal.y + 'px)');
+
+        // item also fades out
+        instance.element.style.opacity = 0;
+
+        // other items move back to stack
+        var item2 = this._secondItem(),
+            item3 = this._thirdItem();
+
+        if (item2) {
+            classie.add(item2, 'move-back');
+            classie.add(item2, 'animate');
+            setTransformStyle(item2, is3d ? 'translate3d(0,0,-60px)' : 'translate(0,0)');
+        }
+        if (item3) {
+            classie.add(item3, 'move-back');
+            classie.add(item3, 'animate');
+            setTransformStyle(item3, is3d ? 'translate3d(0,0,-120px)' : 'translate(0,0)');
+        }
+
+        // after transition ends..
+        var self = this,
+            onEndTransFn = function () {
+                instance.element.removeEventListener(transEndEventName, onEndTransFn);
+
+                // reset first item
+                setTransformStyle(instance.element, is3d ? 'translate3d(0,0,-180px)' : 'translate(0,0,0)');
+                instance.element.style.left = instance.element.style.top = '0px';
+                instance.element.style.zIndex = -1;
+                classie.remove(instance.element, 'animate');
+
+                // reorder stack
+                self.current = self.current < self.itemsCount - 1 ? self.current + 1 : 0;
+                // new front items
+                var item1 = self._firstItem(),
+                    item2 = self._secondItem(),
+                    item3 = self._thirdItem();
+
+                // reset transition timing function
+                classie.remove(item1, 'move-back');
+                if (item2) classie.remove(item2, 'move-back');
+                if (item3) classie.remove(item3, 'move-back');
+
+                setTimeout(function () {
+                    // the upcoming one will animate..
+                    classie.add(self._lastItem(), 'animate');
+                    // reset style
+                    self._setStackStyle();
+                }, 25);
+
+                // add dragging capability
+                self._initDragg();
+
+                // init drag events on new current item
+                self._initEvents();
+
+                // callback
+                self.options.onUpdateStack(self.current);
+            };
+
+        if (supportTransitions) {
+            instance.element.addEventListener(transEndEventName, onEndTransFn);
+        } else {
+            onEndTransFn.call();
+        }
+    };
+
+    ElastiStack.prototype._moveBack = function (instance) {
+        var item2 = this._secondItem(),
+            item3 = this._thirdItem();
+
+        classie.add(instance.element, 'move-back');
+        classie.add(instance.element, 'animate');
+        setTransformStyle(instance.element, is3d ? 'translate3d(0,0,0)' : 'translate(0,0)');
+        instance.element.style.left = '0px';
+        instance.element.style.top = '0px';
+
+        if (item2) {
+            classie.add(item2, 'move-back');
+            classie.add(item2, 'animate');
+            setTransformStyle(item2, is3d ? 'translate3d(0,0,-60px)' : 'translate(0,0)');
+        }
+        if (item3) {
+            classie.add(item3, 'move-back');
+            classie.add(item3, 'animate');
+            setTransformStyle(item3, is3d ? 'translate3d(0,0,-120px)' : 'translate(0,0)');
+        }
+    };
+
+    ElastiStack.prototype._onDragStart = function (instance, event, pointer) {
+        // remove transition classes if any
+        var item2 = this._secondItem(),
+            item3 = this._thirdItem();
+
+        classie.remove(instance.element, 'move-back');
+        classie.remove(instance.element, 'animate');
+
+        if (item2) {
+            classie.remove(item2, 'move-back');
+            classie.remove(item2, 'animate');
+        }
+        if (item3) {
+            classie.remove(item3, 'move-back');
+            classie.remove(item3, 'animate');
+        }
+    };
+
+    ElastiStack.prototype._onDragMove = function (instance, event, pointer) {
+        if (this._outOfBounds(instance)) {
+            this._moveAway(instance);
+        } else {
+            // the second and third items also move
+            var item2 = this._secondItem(),
+                item3 = this._thirdItem();
+            if (item2) {
+                setTransformStyle(item2, is3d ? 'translate3d(' + (instance.position.x * .6) + 'px,' + (instance.position.y * .6) + 'px, -60px)' : 'translate(' + (instance.position.x * .6) + 'px,' + (instance.position.y * .6) + 'px)');
+            }
+            if (item3) {
+                setTransformStyle(item3, is3d ? 'translate3d(' + (instance.position.x * .3) + 'px,' + (instance.position.y * .3) + 'px, -120px)' : 'translate(' + (instance.position.x * .3) + 'px,' + (instance.position.y * .3) + 'px)');
+            }
+        }
+    };
+
+    ElastiStack.prototype._onDragEnd = function (instance, event, pointer) {
+        if (this._outOfBounds(instance)) return;
+        if (this._outOfSight(instance)) {
+            this._moveAway(instance);
+        } else {
+            this._moveBack(instance);
+        }
+    };
+
+    ElastiStack.prototype._initDragg = function () {
+        this.draggie = new Draggabilly(this.items[this.current]);
+    };
+
+    ElastiStack.prototype._disableDragg = function () {
+        this.draggie.disable();
+    };
+
+    // returns true if x or y is bigger than distDragMax
+    ElastiStack.prototype._outOfBounds = function (el) {
+        return Math.abs(el.position.x) > this.options.distDragMax || Math.abs(el.position.y) > this.options.distDragMax;
+    };
+
+    // returns true if x or y is bigger than distDragBack
+    ElastiStack.prototype._outOfSight = function (el) {
+        return Math.abs(el.position.x) > this.options.distDragBack || Math.abs(el.position.y) > this.options.distDragBack;
+    };
+
+    ElastiStack.prototype._getTranslateVal = function (el) {
+        var h = Math.sqrt(Math.pow(el.position.x, 2) + Math.pow(el.position.y, 2)),
+            a = Math.asin(Math.abs(el.position.y) / h) / (Math.PI / 180),
+            hL = h + this.options.distDragBack,
+            dx = Math.cos(a * (Math.PI / 180)) * hL,
+            dy = Math.sin(a * (Math.PI / 180)) * hL,
+            tx = dx - Math.abs(el.position.x),
+            ty = dy - Math.abs(el.position.y);
+
+        return {
+            x: el.position.x > 0 ? tx : tx * -1,
+            y: el.position.y > 0 ? ty : ty * -1
+        }
+    };
+
+    // returns the first item in the stack
+    ElastiStack.prototype._firstItem = function () {
+        return this.items[this.current];
+    };
+
+    // returns the second item in the stack
+    ElastiStack.prototype._secondItem = function () {
+        if (this.itemsCount >= 2) {
+            return this.current + 1 < this.itemsCount ? this.items[this.current + 1] : this.items[Math.abs(this.itemsCount - (this.current + 1))];
+        }
+    };
+
+    // returns the third item in the stack
+    ElastiStack.prototype._thirdItem = function () {
+        if (this.itemsCount >= 3) {
+            return this.current + 2 < this.itemsCount ? this.items[this.current + 2] : this.items[Math.abs(this.itemsCount - (this.current + 2))];
+        }
+    };
+
+    // returns the last item (of the first three) in the stack
+    ElastiStack.prototype._lastItem = function () {
+        if (this.itemsCount >= 3) {
+            return this._thirdItem();
+        } else {
+            return this._secondItem();
+        }
+    };
+
+    // add to global namespace
+    window.ElastiStack = ElastiStack;
+
+})(window);
+
+/*Called after UL*/
+new ElastiStack(document.getElementById('elasticstack'));
+</script>
+<script type="text/javascript">
+  // Trigger CSS animations on scroll.
+// Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+
+// Looking for a version that also reverses the animation when
+// elements scroll below the fold again?
+// --> Check https://codepen.io/bramus/pen/vKpjNP
+
+jQuery(function($) {
+  
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+    
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+    
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.length == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+    
+    // Check all animatables and animate them if necessary
+    $animatables.each(function(i) {
+       var $animatable = $(this);
+      if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+      }
+    });
+
+  };
+  
+  // Hook doAnimations on scroll, and trigger a scroll
+  $(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
+</script>
+</body>
+</html>
